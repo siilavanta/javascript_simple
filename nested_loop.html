@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+	#hello22{
+		background: red;
+		margin-left: 40px;
+	}
+	#mula3{
+		background-color: aqua;
+	}
+</style>
+</head>
+<body>
+
+	<div id="ahome">home item</div>
+
+	<h1 id="hello">helle</h1>
+<div id="bnd">
+	<div id="array">ncujdscujsdn</div>
+</div>
+
+
+<script type="text/javascript">
+var n = 6
+for(var i = 1; i <= n; i++){
+	
+	var result = ''
+	for(var j = 1; j <= i; j++){
+		result += j + ', '
+	}
+	document.write('<br>' + i + '. ' + result)
+	
+}
+
+
+var n = 5
+for(var i =1; i <= n; i++){
+	var result = ''
+	for(var j = 1; j <= i; j++){
+		result += ' u'
+	}
+	document.write('<br>' + i + '. ' + result)
+}
+
+
+
+var arr = new Array(
+'পারাজিকপাল়ি' ,
+'ৰেরঞ্জকণ্ডং' ,
+'১. পারাজিককণ্ডং' ,
+'২. সঙ্ঘাদিসেসকণ্ডং' ,
+'৩. অনিযতকণ্ডং' ,
+'৪. নিস্সগ্গিযকণ্ডং' ,
+'পাচিত্তিযপাল়ি' ,
+'৫. পাচিত্তিযকণ্ডং' ,
+'৬. পাটিদেসনীযকণ্ডং' ,
+'৭. সেখিযকণ্ডং' ,
+'৮. অধিকরণসমথা' ,
+'১. পারাজিককণ্ডং (ভিক্খুনীৰিভঙ্গো)' ,
+'২. সঙ্ঘাদিসেসকণ্ডং (ভিক্খুনীৰিভঙ্গো)' ,
+'৩. নিস্সগ্গিযকণ্ডং (ভিক্খুনীৰিভঙ্গো)' ,
+'৪. পাচিত্তিযকণ্ডং (ভিক্খুনীৰিভঙ্গো)' ,
+'৫. পাটিদেসনীযকণ্ডং (ভিক্খুনীৰিভঙ্গো)' ,
+'৬. সেখিযকণ্ডং (ভিক্খুনীৰিভঙ্গো)' ,
+'৭. অধিকরণসমথা (ভিক্খুনীৰিভঙ্গো)' ,
+'মহাৰগ্গপাল়ি' ,
+'১. মহাখন্ধকো' ,
+'২. উপোসথক্খন্ধকো' ,
+'৩. ৰস্সূপনাযিকক্খন্ধকো' ,
+'৪. পৰারণাক্খন্ধকো' ,
+'৫. চম্মক্খন্ধকো' ,
+'৬. ভেসজ্জক্খন্ধকো' ,
+'৭. কথিনক্খন্ধকো' ,
+'৮. চীৰরক্খন্ধকো' ,
+'৯. চম্পেয্যক্খন্ধকো' ,
+'১০. কোসম্বকক্খন্ধকো' ,
+'চূল়ৰগ্গপাল়ি' ,
+'১. কম্মক্খন্ধকং' ,
+'২. পারিৰাসিকক্খন্ধকং' ,
+'৩. সমুচ্চযক্খন্ধকং' ,
+'৪. সমথক্খন্ধকং' ,
+'৫. খুদ্দকৰত্থুক্খন্ধকং' ,
+'৬. সেনাসনক্খন্ধকং' ,
+'৭. সঙ্ঘভেদকক্খন্ধকং' ,
+'৮. ৰত্তক্খন্ধকং' ,
+'৯. পাতিমোক্খট্ঠপনক্খন্ধকং' ,
+'১০. ভিক্খুনিক্খন্ধকং' ,
+'১১. পঞ্চসতিকক্খন্ধকং' ,
+'১২. সত্তসতিকক্খন্ধকং' ,
+'পরিৰারপাল়ি' ,
+'সোল়সমহাৰারো' ,
+'সমুট্ঠানসীসসঙ্খেপো' ,
+'অন্তরপেয্যালং' ,
+'খন্ধকপুচ্ছাৰারো' ,
+'একুত্তরিকনযো' ,
+'উপোসথাদিপুচ্ছাৰিস্সজ্জনা' ,
+'গাথাসঙ্গণিকং' ,
+'অধিকরণভেদো' ,
+'অপরগাথাসঙ্গণিকং' ,
+'চোদনাকণ্ডং' ,
+'চূল়সঙ্গামো' ,
+'মহাসঙ্গামো' ,
+'কথিনভেদো' ,
+'উপালিপঞ্চকং' ,
+'অত্থাপত্তিসমুট্ঠানং' ,
+'দুতিযগাথাসঙ্গণিকং' ,
+'সেদমোচনগাথা' ,
+'পঞ্চৰগ্গো' ,
+)
+
+function loop(){
+	var j = 0 
+	var out = ''
+	for (j = 0; j < arr.length; j++){
+		out += `<li class='hello' id='hello${j}'>` +  arr[j] +j +`</li>`
+	}
+	var arr1 = document.getElementById('array')
+	arr1.innerHTML = out
+}
+loop()
+
+var helloclass = document.getElementsByName('li')
+var helloId = document.getElementById('hello22')
+	helloId.addEventListener("click", function(){
+		this.remove()
+	
+	})
+//arr[9] = 9
+
+// var arr2 = Array('home', 'town', 'city')
+// console.log(arr2.length)
+
+var arrs = [4, 7, 94, 9, 22, 5]
+var sum = 0
+for(var i = 0; i < arrs.length; i++){
+    sum += arrs[i]
+	
+}
+console.log(sum)
+
+for(var i = 0; i < arrs.length; i++){
+	if(arrs[i] % 2 === 0){
+		console.log(arrs[i])
+	}
+}
+var oddsum = 0
+for (var i = 0; i < arrs.length; i++){
+	if(arrs[i] % 2 === 0 ){
+		oddsum += arrs[i]
+	}
+
+}
+
+console.log(oddsum)
+var text = ['hello', 'home', 'city', 'dhaka']
+
+var spe = ''
+//text.splice(1, 0, '8888')
+var extra = text[0]
+for (var i = 0; i < text.length; i++){
+	if(text[i] === text[2]){
+		spe += text[i]
+	}else{
+		// extra = text[i -2] 
+		//console.log(text[i])	
+		
+	}
+	
+}
+console.log(spe)
+
+//Array থেকে নির্দিষ্ট কোন ডাটা খোজ করার পদ্ধতি।
+
+var search = ['home', 'town', 'village', 'capital']
+//var find = search[5] //আমাদের অ্যারেতে নেই
+var find = search[2]
+var isFound = false
+for(var i = 0; i < search.length; i++){
+	if(search[i] === find){
+		console.log("data is found " + search[i] + " index number is " + i)
+		isFound = true // result পওয়ার পর is found কে true করে দিলাম।
+		break// তারপর লুপ ব্রেক করে দিলাম।
+	}
+
+}
+if(!isFound){ //  ফাংশন true হলে  “ ! ” not operator false return করে ।
+	console.log('data not found!')
+}
+
+// 2d array
+
+// var two_d = [
+// 	['vinoy++++'],
+// 	['parajika', 'pacittiya', 'culavago', 'mohavaggo', 'parivaara'],
+// 	['sutta+++++'],
+// 	['majjimanikaya', 'diganikay', 'samyutta', 'anguttara'],
+// 	['abhidhamma++++'],
+// 	['koathavattu', 'dhatukatha', 'vivnaga']
+// ]
+// var vinaya = 'vinoy'
+// var suta = 'sutta'
+// var abhi = 'abhidhamma'
+// for(var i = 0; i < two_d.length; i++){
+// 	for(var j = 0; j < two_d[i].length; j++){
+// 		document.write(`<li id='mula${j}'> ${two_d[i][j]} </li> `)
+// 	}
+
+// }
+
+// var three_d = [ //label - 1
+// 	['vinoy'], //label - 2
+// 	[
+// 		['p1', 'p2', 'p3']//label - 3
+// 	],
+// 	['sutta'],
+// 	[
+// 		['su1', 'su2', 'su3']
+// 	],
+// 	['abhidhamma'],
+// 	[
+// 		['a1', 'a2', 'a3']
+// 	]
+// ]
+//  for (var i = 0; i < three_d.length; i++){
+// 	// console.log(three_d[i])
+// 	for(var j = 0; j < three_d[i].length; j++){
+// 		for(var k = 0; k < three_d[j].length; k++){
+// 			document.write(three_d[i][j][k])
+// 		}
+		
+// 	}
+
+//  }
+var concat0 = [ 'parajika', 'pacittiya', 'culavago', 'mohavaggo', 'parivaara']
+var concat1 = [ 'majjimanikaya', 'diganikay', 'samyutta', 'anguttara']
+var concat2 = [ 'koathavattu', 'dhatukatha', 'vivnaga']
+concat0[0] = 'cdsjn'
+concat1[0] = `<div> sutta <div>`
+concat2[0] = `<div> abhi <div>`
+
+var newArr = concat0.concat(concat1, concat2)
+//console.log(newArr)
+
+
+
+for(var i = 0; i < newArr.length; i++){
+
+	document.write('<li>' + i + newArr[i] + '</li>')
+}
+
+</script>
+</body>
+</html>
+
