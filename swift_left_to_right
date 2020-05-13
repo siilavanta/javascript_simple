@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+var start = null;
+ window.addEventListener("touchstart",function(event){
+     document.body.innerHTML = "touch";
+   if(event.touches.length === 1){
+       document.body.innerHTML = " single touch";
+      //just one finger touched
+      start = event.touches.item(0).clientX;
+    }else{
+    start = null;
+    }
+  });
+
+window.addEventListener("touchend",function(event){
+    var offset = 100;//at least 100px are a swipe
+    if(start){
+        document.body.innerHTML = " single touch end";
+      //just one finger touched
+      var end = event.changedTouches.item(0).clientX;
+
+      if(end > start + offset){
+       //a left -> right swipe
+      document.body.innerHTML = "right";
+alert('right')
+      }
+      if(end < start - offset ){
+       //a right -> left swipe
+       document.body.innerHTML = " left";
+       alert("left")
+      }
+    }
+  });
+//https://jsbin.com/fizenudasi/edit?html
+</script>
+</html>
