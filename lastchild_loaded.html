@@ -1,0 +1,23 @@
+<div style="display:none">A</div>
+<div style="display:none">B</div>  
+<div style="display:none">C</div>  
+<div style="display:none">D</div>
+<div style="display:none">E</div>    
+<script>
+var divs = document.getElementsByTagName('div');
+var last;
+
+if (divs) {
+	for (var i = 0; i < divs.length; i++) {
+        if (divs[i].style.display = 'block') {
+			last = divs[i];           
+		}
+	}
+}
+
+if (last) {
+	last.style.background = 'red';
+  
+}
+//http://jsfiddle.net/uEeaA/90/
+</script>
