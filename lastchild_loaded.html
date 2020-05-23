@@ -20,4 +20,35 @@ if (last) {
   
 }
 //http://jsfiddle.net/uEeaA/90/
+	//same method
+	
+	 function pload(){
+   document.getElementById('imgid').style.display = "block"
+   var parent = document.querySelectorAll('.chaptxt')
+
+  for(var i = 0; i < parent.length; i++){
+    parent[i].querySelectorAll('P') 
+  }
+   var last;
+
+   setTimeout(function(){
+    
+    
+    if (divs) {
+      for (var i = 0; i < divs.length; i++) {
+            if (divs[i].style.display = 'block') {
+          last = divs[i];           
+        }
+      }
+    }
+    
+    if (last) {
+      last.style.background = 'red'; 
+        setTimeout(function(){
+          document.getElementById('imgid').style.display = "none"
+        }, 10)
+      }
+    }, 100)
+
+ }
 </script>
