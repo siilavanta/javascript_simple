@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+<ul idu="list" >
+
+	<li>one
+		<i sub="u">bbbbbbbb</i>
+	</li>
+	
+	<li title="k" > two</li>
+	<li>treee</li>
+	<li title="h" >four</li>
+	<li sub="h" >five</li>
+
+</ul>
+<div id="out"></div>
+<script type="text/javascript">
+function loadFilter() {
+var k = document.getElementsByClassName('k')
+    var element = document.getElementById('list');
+    var children = document.querySelectorAll('ul, li');
+    var filtered = [];
+    for (let i = 0; i < children.length; i++) {
+    //also filter by (children[i].textContent.startsWith(' '))
+        if (children[i].getAttribute('sub')){
+            //filtered.push('ckkk' + children[i].textContent);
+            filtered.push(`sub ${i}: `+ children[i].textContent)
+            continue;
+        }
+        if(children[i].getAttribute('title')){
+        	filtered.push('title : ' + children[i].textContent)
+        }else{
+        	//console.log('normal : ' + children[i].textContent)
+        
+        }
+        
+    }
+   //
+   console.log(filtered)
+   
+}
+loadFilter()
+document.getElementById('out').innerHTML = filtered
+
+//https://stackoverflow.com/questions/46576351/javascript-get-specific-values-from-array-list
+</script>
+</body>
+</html>
