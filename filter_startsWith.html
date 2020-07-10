@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+<input id="input" ><button onclick="filterfun()">Search</button>
+<div id="count" ></div>
+<div id="out"></div>
+<script type="text/javascript">
+
+function filterfun(){
+let input = document.getElementById('input')
+let val = input.value
+
+
+const isEmptyValue = (value) => {
+    if (value === '' || value === null || value === undefined) {
+        return true
+    } else {
+    	document.getElementById('out').innerHTML = 'Not match'
+    	document.getElementById('count').innerHTML = ''
+        return false
+    }
+}
+let notMatch = isEmptyValue(val)
+	let obj = {
+		apple: 'fruit',
+		rice: 'food',
+		rat: 'animal',
+		radish: 'vegetable',
+		hello: 'say'
+	
+	}
+	let i = ''
+	let arr = []
+	for(i in obj){
+		let isMatch = i.startsWith(val)
+		if(notMatch){
+		document.getElementById('out').innerHTML = 'Please type anything'
+		}else{
+			if(isMatch){
+			//console.log(obj[i])
+			arr.push(`${i}` + ': ' + obj[i])
+			document.getElementById('count').innerHTML = 'Total found of ' + val + ': '+ arr.length
+			document.getElementById('out').innerHTML = arr.join('<br>')
+			}
+		}
+	//console.log(i.startsWith('r'))
+	}
+
+}
+</script>
+</body>
+</html>
