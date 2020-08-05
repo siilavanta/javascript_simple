@@ -7,4 +7,4 @@ let t = tempDivElement.innerText
 let words = t.match(/\w+|\S/g)
 console.log(words)
 
-//console.log(typeof words)
+console.log(typeof words)
