@@ -1,3 +1,5 @@
+
+"use strict";
 var itemlist = ['food', 'book', 'car', 'kkk']
 var fooditem = ['kabab', 'noodles', 'drycake', 'soup', 'kkk']
 var bookitem = ['english', 'bangla', 'chakma']
