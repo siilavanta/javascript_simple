@@ -1,0 +1,18 @@
+
+function bubleSort(arr){
+  let temp;
+  for(let i=arr.length; i>0; i--){
+    for(let j = 0; j<arr.length; j++){
+      if(arr[j] > arr[j + 1]){
+        temp = arr[j]
+        arr[j]= arr[j + 1];
+        arr[j + 1] = temp
+      }else if(arr[j] == arr[j+1]){
+        return [...new Set(arr)]
+      }
+    }
+  }
+  return arr
+}
+const arr = [3,12,1,4,10,8,6,5,2,1]
+console.log(bubleSort(arr))
