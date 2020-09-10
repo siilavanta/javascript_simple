@@ -29,3 +29,4 @@ var byGoal = filterByProperty(arr, "goal", "time");
 console.log(byName)
 console.log(byGoal)
 //https://stackoverflow.com/questions/9206914/how-to-filter-multidimensional-javascript-array/56267951
+ 
