@@ -21,4 +21,4 @@ function bubleSort(arr){
   return arr
 }
 const arr = [3,12,1,4,10,8,6,5,2,1]
-console.log(bubleSort(arr))
+//console.log(bubleSort(arr))
