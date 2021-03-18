@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		p {
+  height:600px;
+}
+.button {
+  position:fixed;
+  cursor:pointer;
+  top:5%; 
+} 
+.next {
+  right:5%;
+}
+.prev {
+  right:15%;
+}
+	</style>
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="button prev">PREV</div>
+<div class="button next">NEXT</div>
+
+<h1>Welcome to My Homepage</h1>
+
+<p class="pe">This is the pe  first paragraph.</p>
+<p class="pe">This is the second paragraph.</p>
+<p class="pe">This is the third paragraph.</p>
+<p class="pe">This is the end last paragraph.</p>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+    $('.button.next').click(function() {
+       var target;
+       $(".pe").each(function(i, element) {
+         target = $(element).offset().top;
+         if (target - 10 > $(document).scrollTop()) {
+           return false; // break
+         }
+       });
+       $("html, body").animate({
+         scrollTop: target
+       }, 1000);
+    });
+    
+    $('.button.prev').click(function() {
+       var target;
+       $(".pe").each(function(i, element) {
+         current = $(element).offset().top;
+         if (current + 10 > $(document).scrollTop()) {
+           if (i == 0){
+             target = 0;
+           }
+           else {
+             target = $(".pe").eq(i-1).offset().top
+           }
+           return false; // break
+         }
+       });
+       $("html, body").animate({
+         scrollTop: target
+       }, 1000);
+    });
+});
+</script>
+
+</body>
+</html>
