@@ -1,0 +1,22 @@
+<style>
+div {
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  width: 200px;
+}
+</style>
+
+<div id='selectable'>
+select some of this text, the result will show up below
+</div>
+<div id='result'>
+  Text Selected? <span class='is-selected'>false</span><br />
+  Selection: <span class='selection'></span>
+</div>
+<script>
+$('#selectable').on("mouseup", function () {
+    $('.selection').text(window.getSelection().toString());
+    $('.is-selected').text(window.getSelection().toString() != "");
+});
+</script>
