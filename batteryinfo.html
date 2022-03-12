@@ -6,7 +6,11 @@
     window.onload = function () {
       function updateBatteryStatus(battery) {
         document.querySelector('#charging').textContent = battery.charging ? 'charging' : 'not charging';
-        document.querySelector('#level').textContent = battery.level;
+                var lvl = battery.level + ''
+                lvl = lvl.replace('0.', '')
+                lvl = lvl.replace('1.', '1')
+
+                document.querySelector('#level').textContent = lvl + "%";
         document.querySelector('#dischargingTime').textContent = battery.dischargingTime / 60;
       }
 
